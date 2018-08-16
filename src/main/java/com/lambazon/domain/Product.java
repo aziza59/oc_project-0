@@ -82,14 +82,15 @@ public class Product {
 	}
 
 	public double getInventoryPrice() {
-		// TODO Auto-generated method stub
+		// old:TODO Auto-generated method stub
 		//return value is not null
 		return inventoryprice;
 	}
 	
 	public void setInventoryPrice(double inventoryprice) {
 		//function return value is not null in inventory price
-		//contructor is modified ,i must be update the file product.java
-		this.inventoryprice=inventoryprice
+		//contructor is modified,i must be update the file productrepository.java
+		//new : calculation of the total inventory price by multiplying the price by the quantity 
+		this.inventoryprice=price*quantity;
 	}
 }
