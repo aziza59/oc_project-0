@@ -5,14 +5,17 @@ public class Product {
 	private Integer id;
 	private String name, description, details;
 	private int quantity;
-	private double price;
+	//declaration variable InventoryPrice//
+	private double price, inventoryprice;
 
-	public Product(int id, int quantity, double price, String name, String description) {
+	public Product(int id, int quantity, double price, String name, String description, double inventoryprice) {
 		setId(id);
 		setQuantity(quantity);
 		setPrice(price);
 		setName(name);
 		setDescription(description);
+		//adding function setInventoryPrice
+		setInventoryPrice(inventoryprice);
 	}
 
 	public Integer getId() {
@@ -65,6 +68,13 @@ public class Product {
 
 	public double getInventoryPrice() {
 		// TODO Auto-generated method stub
-		return 0.0;
+		//return value is not null
+		return inventoryprice;
+	}
+	
+	public void setInventoryPrice(double inventoryprice) {
+		//function return value is not null in inventory price
+		//contructor is modified ,i must be update the file product.java
+		this.inventoryprice=inventoryprice
 	}
 }
