@@ -18,14 +18,15 @@ public class ProductRepository {
 	private static void generateProductData() {
 		int id=0;
 		//adding the variable for my price inventory field value
-		products.put(++id, new Product(id, 10, 92.50, "Echo Dot", "(2nd Generation) - Black",id));
-		products.put(++id, new Product(id, 20, 9.99, "Anker 3ft / 0.9m Nylon Braided", "Tangle-Free Micro USB Cable",id));
-		products.put(++id, new Product(id, 30, 69.99, "JVC HAFX8R Headphone", "Riptidz, In-Ear",id));
-		products.put(++id, new Product(id, 40, 32.50, "VTech CS6114 DECT 6.0", "Cordless Phone",id));
-		products.put(++id, new Product(id, 50, 895.00, "NOKIA OEM BL-5J", "Cell Phone ",id));
+		//delete the wrong attributes 
+		products.put(++id, new Product(id, 10, 92.50, "Echo Dot", "(2nd Generation) - Black"));
+		products.put(++id, new Product(id, 20, 9.99, "Anker 3ft / 0.9m Nylon Braided", "Tangle-Free Micro USB Cable"));
+		products.put(++id, new Product(id, 30, 69.99, "JVC HAFX8R Headphone", "Riptidz, In-Ear"));
+		products.put(++id, new Product(id, 40, 32.50, "VTech CS6114 DECT 6.0", "Cordless Phone"));
+		products.put(++id, new Product(id, 50, 895.00, "NOKIA OEM BL-5J", "Cell Phone "));
 		//add two new products //
-		products.put(++id, new Product(id, 60, 39.50, "SAGEM AEG", "Cordless Phone",id));
-		products.put(++id, new Product(id, 70, 95.00, "HUAWEI DRT", "Cell Phone ",id));
+		products.put(++id, new Product(id, 60, 39.50, "SAGEM AEG", "Cordless Phone"));
+		products.put(++id, new Product(id, 70, 95.00, "HUAWEI DRT", "Cell Phone "));
 	}
 	
 	public List<Product> products() {
