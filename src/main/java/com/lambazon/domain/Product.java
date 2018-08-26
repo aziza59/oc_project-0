@@ -5,17 +5,19 @@ public class Product {
 	private Integer id;
 	private String name, description, details;
 	private int quantity;
-	//declaration variable InventoryPrice//
-	private double price, inventoryprice;
+	//declaration variable InventoryPrice
+	//delete InventoryPrice
+	private double price;
 
-	public Product(int id, int quantity, double price, String name, String description, double inventoryprice) {
+	public Product(int id, int quantity, double price, String name, String description) {
 		setId(id);
 		setQuantity(quantity);
 		setPrice(price);
 		setName(name);
 		setDescription(description);
 		//adding function setInventoryPrice
-		setInventoryPrice(inventoryprice);
+		//delete InventoryPrice
+		
 	}
 
 	public Integer getId() {
@@ -72,9 +74,10 @@ public class Product {
 	public void setPrice(double price) {
 		//old:this.price = price;
 		//price is not negative and not better than 1000 if not put value 0
-		if(price>= 0 &&price< 1000) 
+		//update setprice :add space,equal
+		if (price >= 0 && price <= 1000) 
 			this.price = price; 
-		else if(price>1000)
+		else if (price > 1000)
 			this.price = 1000;
 		else
 			this.price = 0;  
@@ -83,14 +86,10 @@ public class Product {
 
 	public double getInventoryPrice() {
 		// old:TODO Auto-generated method stub
-		//return value is not null
-		return inventoryprice;
+		//calculation of inventoryPrice
+		return quantity*price;
+
 	}
 	
-	public void setInventoryPrice(double inventoryprice) {
-		//function return value is not null in inventory price
-		//contructor is modified,i must be update the file productrepository.java
-		//new : calculation of the total inventory price by multiplying the price by the quantity 
-		this.inventoryprice=price*quantity;
-	}
+	//delete setInventoryPrice
 }
